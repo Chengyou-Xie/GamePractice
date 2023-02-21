@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+    --bg-color: #e5e1d8;
+    --primary-color: #b22c27;
+    --secondary-color: #2c4c7b;
+    --body-font-family: "Noto Sans TC", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font-family);
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 2rem;
+}
+h4 {
+    font-size: 1.5rem;
+}
+h5 {
+    font-size: 1rem;
+}
+h6 {
+    font-size: 0.8rem;
+}
+
+body {
+    nav {
+        height: 88px;
+        background-color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        button {
+            font-size: 1.5rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 12px;
+            border: none;
+            background-color: var(--bg-color);
+        }
+        svg {
+            height: 70px;
+            position: absolute;
+            top: 9px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        a.exit {
+            text-decoration: none;
+            i.leave {
+                font-size: 3.5rem;
+                color: var(--bg-color);
+                cursor: pointer;
+            }
+        }
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin: 1.25rem;
+    }
+
+    div.gameContainer {
+        // border: 1px solid green;
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 32px;
+        a {
+            width: calc((100% - 128px) / 3);
+            // transition: top 5s ease;
+            text-decoration: none;
+            color: var(--primary-color);
+            div.game {
+                div.gameImage {
+                    height: 50vh;
+                    border: 3px solid var(--primary-color);
+                    border-radius: 32px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        // border: 1px solid black;
+                        border-radius: 28px;
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                }
+                h3 {
+                    text-align: center;
+                    margin: 1rem;
+                }
+            }
+            &:hover {
+                position: relative;
+                top: -20px;
+            }
+        }
+    }
+
+    div.questionBanner {
+        border: 3px dashed var(--primary-color);
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 4rem;
+        padding: 1.5rem;
+
+        div.questionContainer {
+            height: 350px;
+            display: flex;
+            align-items: center;
+            // margin-top: 1.5rem;
+
+            h3#question {
+                font-size: 5rem;
+                text-align: center;
+            }
+        }
+        select {
+            border: 2px solid;
+            border-color: var(--body-font-family);
+            font-size: 1.5rem;
+            padding: 0.75rem;
+            background-color: transparent;
+            border-radius: 12px;
+            width: 150px;
+            text-align: center;
+            color: var(--body-font-family);
+
+            option {
+                font-size: 1rem;
+                color: black;
+            }
+        }
+    }
+
+    div.buttonContainer {
+        // text-align: center;
+        margin: 1.5rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        button {
+            width: 48%;
+            color: white;
+            padding: 1.5rem 2.5rem;
+            font-size: 2rem;
+            border-radius: 12px;
+            // margin: 1rem 3rem;
+        }
+        button.truth {
+            background-color: rgba(190, 30, 30, 30%);
+            border: 3px solid var(--primary-color);
+        }
+        button.dare {
+            background-color: rgba(60, 80, 210, 50%);
+            border: 3px solid var(--secondary-color);
+        }
+    }
+
+    h3.game2 {
+        color: rgb(107, 102, 97);
+        text-align: center;
+    }
+
+    div.bottleContainer {
+        // border: 3px solid black;
+        text-align: center;
+        margin: 5rem 0;
+        img.pointer {
+            transform: rotate(45deg);
+            height: 50vh;
+        }
+
+        h5 {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            background-color: rgba(217, 217, 217, 78%);
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+
+    h3.game3 {
+        text-align: center;
+        color: rgb(102, 102, 102);
+        font-size: 4.5rem;
+        span {
+            color: var(--primary-color);
+            font-size: 5rem;
+        }
+    }
+
+    div.board {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        div.input {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h5.inputValue {
+                text-align: center;
+                font-size: 7rem;
+                color: var(--secondary-color);
+                writing-mode: vertical-lr;
+            }
+            span.typing {
+                font-size: 7rem;
+                color: var(--secondary-color);
+                animation: typing 0.4s step-end 0s infinite alternate forwards;
+                writing-mode: vertical-lr;
+                padding: 20px 0;
+                padding-left: 30px;
+            }
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 10px;
+            tr {
+                td {
+                    border: 2px solid black;
+                    border-radius: 16px;
+                    width: 90px;
+                    height: 90px;
+                    text-align: center;
+                    cursor: pointer;
+                    padding: 6px;
+                    img {
+                        height: 80px;
+                    }
+                }
+            }
+        }
+    }
+
+    div#boom {
+        width: 550px;
+        height: 250px;
+        background-color: #e5e1d8;
+        border: 5px solid var(--primary-color);
+        border-radius: 20px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+        text-align: center;
+        line-height: 250px;
+        font-size: 2.5rem;
+    }
+}
+
+@keyframes typing {
+    0% {
+        color: var(--secondary-color);
+    }
+    50% {
+        color: var(--bg-color);
+    }
+    100% {
+        color: var(--secondary-color);
+    }
+}

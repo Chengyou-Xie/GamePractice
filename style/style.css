@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+:root {
+  --bg-color: #e5e1d8;
+  --primary-color: #b22c27;
+  --secondary-color: #2c4c7b;
+  --body-font-family: "Noto Sans TC", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+body {
+  margin: 0;
+  font-family: var(--body-font-family);
+  color: var(--primary-color);
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+body nav {
+  height: 88px;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+body nav button {
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--bg-color);
+}
+body nav svg {
+  height: 70px;
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+body nav a.exit {
+  text-decoration: none;
+}
+body nav a.exit i.leave {
+  font-size: 3.5rem;
+  color: var(--bg-color);
+  cursor: pointer;
+}
+body h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 1.25rem;
+}
+body div.gameContainer {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 32px;
+}
+body div.gameContainer a {
+  width: calc((100% - 128px) / 3);
+  text-decoration: none;
+  color: var(--primary-color);
+}
+body div.gameContainer a div.game div.gameImage {
+  height: 50vh;
+  border: 3px solid var(--primary-color);
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body div.gameContainer a div.game div.gameImage img {
+  border-radius: 28px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+body div.gameContainer a div.game h3 {
+  text-align: center;
+  margin: 1rem;
+}
+body div.gameContainer a:hover {
+  position: relative;
+  top: -20px;
+}
+body div.questionBanner {
+  border: 3px dashed var(--primary-color);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 4rem;
+  padding: 1.5rem;
+}
+body div.questionBanner div.questionContainer {
+  height: 350px;
+  display: flex;
+  align-items: center;
+}
+body div.questionBanner div.questionContainer h3#question {
+  font-size: 5rem;
+  text-align: center;
+}
+body div.questionBanner select {
+  border: 2px solid;
+  border-color: var(--body-font-family);
+  font-size: 1.5rem;
+  padding: 0.75rem;
+  background-color: transparent;
+  border-radius: 12px;
+  width: 150px;
+  text-align: center;
+  color: var(--body-font-family);
+}
+body div.questionBanner select option {
+  font-size: 1rem;
+  color: black;
+}
+body div.buttonContainer {
+  margin: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+body div.buttonContainer button {
+  width: 48%;
+  color: white;
+  padding: 1.5rem 2.5rem;
+  font-size: 2rem;
+  border-radius: 12px;
+}
+body div.buttonContainer button.truth {
+  background-color: rgba(190, 30, 30, 0.3);
+  border: 3px solid var(--primary-color);
+}
+body div.buttonContainer button.dare {
+  background-color: rgba(60, 80, 210, 0.5);
+  border: 3px solid var(--secondary-color);
+}
+body h3.game2 {
+  color: rgb(107, 102, 97);
+  text-align: center;
+}
+body div.bottleContainer {
+  text-align: center;
+  margin: 5rem 0;
+}
+body div.bottleContainer img.pointer {
+  transform: rotate(45deg);
+  height: 50vh;
+}
+body div.bottleContainer h5 {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  background-color: rgba(217, 217, 217, 0.78);
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+body h3.game3 {
+  text-align: center;
+  color: rgb(102, 102, 102);
+  font-size: 4.5rem;
+}
+body h3.game3 span {
+  color: var(--primary-color);
+  font-size: 5rem;
+}
+body div.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+body div.board div.input {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body div.board div.input h5.inputValue {
+  text-align: center;
+  font-size: 7rem;
+  color: var(--secondary-color);
+  writing-mode: vertical-lr;
+}
+body div.board div.input span.typing {
+  font-size: 7rem;
+  color: var(--secondary-color);
+  animation: typing 0.4s step-end 0s infinite alternate forwards;
+  writing-mode: vertical-lr;
+  padding: 20px 0;
+  padding-left: 30px;
+}
+body div.board table {
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+body div.board table tr td {
+  border: 2px solid black;
+  border-radius: 16px;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  cursor: pointer;
+  padding: 6px;
+}
+body div.board table tr td img {
+  height: 80px;
+}
+body div#boom {
+  width: 550px;
+  height: 250px;
+  background-color: #e5e1d8;
+  border: 5px solid var(--primary-color);
+  border-radius: 20px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  text-align: center;
+  line-height: 250px;
+  font-size: 2.5rem;
+}
+
+@keyframes typing {
+  0% {
+    color: var(--secondary-color);
+  }
+  50% {
+    color: var(--bg-color);
+  }
+  100% {
+    color: var(--secondary-color);
+  }
+}/*# sourceMappingURL=style.css.map */
